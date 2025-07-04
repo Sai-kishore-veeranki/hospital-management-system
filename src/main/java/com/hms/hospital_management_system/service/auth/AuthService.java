@@ -7,6 +7,7 @@ import com.hms.hospital_management_system.dto.RegisterRequest;
 import com.hms.hospital_management_system.entity.User;
 import com.hms.hospital_management_system.repository.UserRepository;
 import com.hms.hospital_management_system.security.JwtService;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

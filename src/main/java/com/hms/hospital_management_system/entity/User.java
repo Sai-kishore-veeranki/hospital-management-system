@@ -14,10 +14,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "users") // 'user' is a reserved keyword in some DBs
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Builder
 public class User implements UserDetails {
 

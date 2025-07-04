@@ -1,9 +1,12 @@
 package com.hms.hospital_management_system.controller;
 
 
+
 import com.hms.hospital_management_system.dto.PatientRequest;
 import com.hms.hospital_management_system.dto.PatientResponse;
 import com.hms.hospital_management_system.service.PatientService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -13,6 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+
+@Tag(name = "Patients", description = "Endpoints for managing patient records")
 @RestController
 @RequestMapping("/api/patients")
 @RequiredArgsConstructor
@@ -20,6 +25,8 @@ public class PatientController {
 
     private final PatientService patientService;
 
+
+    @Operation(summary = "Create a new patient", description = "Accessible only by admins")
     @PreAuthorize("hasAnyRole('ADMIN')") // Only ADMIN can create patients for now
     @PostMapping
     public ResponseEntity<PatientResponse> createPatient(@Valid @RequestBody PatientRequest request) {

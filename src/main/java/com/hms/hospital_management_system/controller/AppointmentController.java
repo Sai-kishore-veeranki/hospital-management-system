@@ -5,7 +5,6 @@ import com.hms.hospital_management_system.dto.AppointmentRequest;
 import com.hms.hospital_management_system.dto.AppointmentResponse;
 import com.hms.hospital_management_system.service.AppointmentService;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
