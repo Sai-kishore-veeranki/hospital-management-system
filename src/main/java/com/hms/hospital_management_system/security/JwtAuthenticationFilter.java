@@ -16,9 +16,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.ArrayList; // <--- ENSURE THIS IMPORT IS PRESENT
-import java.util.Collection; // <--- ENSURE THIS IMPORT IS PRESENT
-import org.springframework.security.core.authority.SimpleGrantedAuthority; // <--- ENSURE THIS IMPORT IS PRESENT
+import java.util.ArrayList; 
+import java.util.Collection; 
+import org.springframework.security.core.authority.SimpleGrantedAuthority; 
 
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
